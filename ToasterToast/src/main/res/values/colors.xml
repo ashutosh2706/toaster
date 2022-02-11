@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_toast_bg_color">#E1E1E1</color>
+    <color name="success_toast_bg_color">#00FF67</color>
+    <color name="error_toast_bg_color">#FF2222</color>
+    <color name="toast_foreground">#000000</color>
+</resources>

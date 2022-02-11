@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toast_corner_radius">10dp</dimen>
+    <dimen name="toast_left_padding">12dp</dimen>
+    <dimen name="toast_top_padding">7dp</dimen>
+</resources>
