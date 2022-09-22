@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import m.ashutosh.toastertoast.Toaster;
@@ -16,18 +15,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button success,error,normal;
+        Button success,error,normal,info,warn;
         success = findViewById(R.id.toast_success);
         error = findViewById(R.id.toast_err);
         normal = findViewById(R.id.toast_def);
+        info = findViewById(R.id.toast_inf);
+        warn = findViewById(R.id.toast_warn);
 
-        Context context = MainActivity.this;
+        final Context context = getApplicationContext();
 
-        success.setOnClickListener(view -> Toaster.makeToast(context,"Download Successful", Toaster.LENGTH_LONG,Toaster.SUCCESS));
+        success.setOnClickListener(view -> Toaster.makeToast(context,"Success Toast", Toaster.LENGTH_SHORT,Toaster.SUCCESS));
 
-        normal.setOnClickListener(view -> Toaster.makeToast(context,"Default toast",Toaster.LENGTH_LONG,Toaster.DEFAULT));
+        normal.setOnClickListener(view -> Toaster.makeToast(context,"Default toast",Toaster.LENGTH_SHORT,Toaster.DEFAULT));
 
-        error.setOnClickListener(view -> Toaster.makeToast(context,"Download Failed",Toaster.LENGTH_LONG,Toaster.ERROR));
+        error.setOnClickListener(view -> Toaster.makeToast(context,"Error Toast",Toaster.LENGTH_SHORT,Toaster.ERROR));
+
+        info.setOnClickListener(view -> Toaster.makeToast(context,"Info Toast",Toaster.LENGTH_SHORT,Toaster.INFO));
+
+        warn.setOnClickListener(view -> Toaster.makeToast(context,"Warning Toast",Toaster.LENGTH_SHORT,Toaster.WARN));
 
     }
 }
